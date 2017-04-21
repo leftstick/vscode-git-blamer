@@ -28,6 +28,7 @@
     "activationEvents": [
         "onCommand:extension.gitblame"
     ],
+    "license": "GPL-3.0",
     "main": "./out/src",
     "contributes": {
         "menus": {

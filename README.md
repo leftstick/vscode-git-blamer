@@ -7,7 +7,7 @@
 
 Git blame selected source code information in output panel.
 
-![](https://raw.githubusercontent.com/leftstick/vscode-git-blame/master/images/blame.gif)
+![](https://raw.githubusercontent.com/leftstick/vscode-git-blamer/master/images/blame.gif)
 
 ## Install
 
@@ -19,37 +19,17 @@ ext install git-blamer
 
 ## Usage
 
-I assume you are familiar with the [configuration](https://github.com/millermedeiros/esformatter/blob/master/doc/config.md) for `esformatter`.
+I assume you have [git](https://git-scm.com/) installed.
 
-`vscode-git-blame` will read configurations from following places in order:
-
-1. `${workspaceRoot}/.esformatter`(strongly recommended)
-2. configurations directly set in `package.json`
-3. `~/.esformatter`
-4. `/.esformatter`
-
-Once you save updates to a `JavaScript` file, `vscode-git-blame` tries format code automatically for you.
-
-### Settings
-
-```javascript
-{
-    "editor.formatOnSave": false //whether to format code on save
-}
-```
-
-### Keybindings
-
-The default format command `shift+alt+f` is overrided, so when you go with `Format Code` approach, `vscode-git-blame` take the job from built-in formatter.
-
+`vscode-git-blamer` will `blame` your selected line(s) of source code, and display blame information into output channel
 
 ## LICENSE ##
 
-[MIT License](https://raw.githubusercontent.com/leftstick/vscode-git-blame/master/LICENSE)
+[GPL v3 License](https://raw.githubusercontent.com/leftstick/vscode-git-blamer/master/LICENSE)
 
 
-[vs-url]: https://marketplace.visualstudio.com/items?itemName=howardzuo.vscode-git-blame
-[vs-image]: http://vsmarketplacebadge.apphb.com/version/howardzuo.vscode-git-blame.svg
-[install-url]: http://vsmarketplacebadge.apphb.com/installs/howardzuo.vscode-git-blame.svg
-[rate-url]: http://vsmarketplacebadge.apphb.com/rating/howardzuo.vscode-git-blame.svg
-[license-url]: https://img.shields.io/github/license/leftstick/vscode-git-blame.svg
+[vs-url]: https://marketplace.visualstudio.com/items?itemName=howardzuo.vscode-git-blamer
+[vs-image]: http://vsmarketplacebadge.apphb.com/version/howardzuo.vscode-git-blamer.svg
+[install-url]: http://vsmarketplacebadge.apphb.com/installs/howardzuo.vscode-git-blamer.svg
+[rate-url]: http://vsmarketplacebadge.apphb.com/rating/howardzuo.vscode-git-blamer.svg
+[license-url]: https://img.shields.io/github/license/leftstick/vscode-git-blamer.svg
