@@ -15,6 +15,16 @@
     "categories": [
         "Debuggers"
     ],
+    "icon": "images/git-logo.png",
+    "bugs": {
+        "url": "https://github.com/leftstick/vscode-git-blame/issues",
+        "email": "leftstick@qq.com"
+    },
+    "homepage": "https://github.com/leftstick/vscode-git-blame/blob/master/README.md",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/leftstick/vscode-git-blame.git"
+    },
     "activationEvents": [
         "onCommand:extension.gitblame"
     ],
