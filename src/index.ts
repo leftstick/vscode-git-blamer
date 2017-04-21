@@ -30,8 +30,11 @@ export function activate(context: vscode.ExtensionContext) {
         child_process.exec(cmd, {
             cwd: vscode.workspace.rootPath
         }, (error, stdout, stderr) => {
-            var myOutputChannel = vscode.window.createOutputChannel('Git blame');
+            const myOutputChannel = vscode.window.createOutputChannel('Git blame');
             myOutputChannel.show();
+            if (error) {
+                return myOutputChannel.append(error.message);
+            }
             myOutputChannel.append(stdout);
         });
        
