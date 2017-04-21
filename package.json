@@ -1,6 +1,6 @@
 {
-    "name": "vscode-git-blame",
-    "displayName": "git-blame",
+    "name": "vscode-git-blamer",
+    "displayName": "git-blamer",
     "description": "git blame selected source code information in output panel",
     "version": "1.0.0",
     "publisher": "howardzuo",
@@ -17,13 +17,13 @@
     ],
     "icon": "images/git-logo.png",
     "bugs": {
-        "url": "https://github.com/leftstick/vscode-git-blame/issues",
+        "url": "https://github.com/leftstick/vscode-git-blamer/issues",
         "email": "leftstick@qq.com"
     },
-    "homepage": "https://github.com/leftstick/vscode-git-blame/blob/master/README.md",
+    "homepage": "https://github.com/leftstick/vscode-git-blamer/blob/master/README.md",
     "repository": {
         "type": "git",
-        "url": "https://github.com/leftstick/vscode-git-blame.git"
+        "url": "https://github.com/leftstick/vscode-git-blamer.git"
     },
     "activationEvents": [
         "onCommand:extension.gitblame"
