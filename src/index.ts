@@ -22,9 +22,9 @@ export function activate(context: vscode.ExtensionContext) {
         const selection = editor.selection;
 
         if (selection.start.line === selection.end.line) {
-            cmd += `-L${selection.start.line} ${editor.document.fileName}`;
+            cmd += `-L ${selection.start.line + 1} ${editor.document.fileName}`;
         } else {
-            cmd += `-L${selection.start.line},${selection.end.line} ${editor.document.fileName}`;
+            cmd += `-L ${selection.start.line + 1},${selection.end.line + 1} ${editor.document.fileName}`;
         }
 
         child_process.exec(cmd, {
