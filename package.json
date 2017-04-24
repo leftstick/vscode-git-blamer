@@ -39,7 +39,12 @@
         },
         "commands": [{
             "command": "extension.gitblame",
-            "title": "Git blame"
+            "title": "Git blame",
+            "key": "ctrl+b"
+        }],
+        "keybindings": [{
+            "command": "extension.gitblame",
+            "key": "alt+b"
         }]
     },
     "devDependencies": {
