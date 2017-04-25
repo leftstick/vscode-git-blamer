@@ -16,16 +16,11 @@ export function activate(context: vscode.ExtensionContext) {
     // The commandId parameter must match the command field in package.json
     let disposable = vscode.commands.registerCommand('extension.gitblame', () => {
         // The code you place here will be executed every time your command is executed
-        let cmd = 'git blame ';
 
         const editor = vscode.window.activeTextEditor;
         const selection = editor.selection;
 
-        if (selection.start.line === selection.end.line) {
-            cmd += `-L ${selection.start.line + 1} ${editor.document.fileName}`;
-        } else {
-            cmd += `-L ${selection.start.line + 1},${selection.end.line + 1} ${editor.document.fileName}`;
-        }
+        const cmd = `git blame -L ${selection.start.line + 1},${selection.end.line + 1} ${editor.document.fileName}`;
 
         child_process.exec(cmd, {
             cwd: vscode.workspace.rootPath
