@@ -2,7 +2,7 @@
     "name": "vscode-git-blamer",
     "displayName": "git-blamer",
     "description": "git blame selected source code information in output panel",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "publisher": "howardzuo",
     "engines": {
         "vscode": "^1.11.0"

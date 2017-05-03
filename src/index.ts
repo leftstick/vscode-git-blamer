@@ -18,6 +18,10 @@ export function activate(context: vscode.ExtensionContext) {
         // The code you place here will be executed every time your command is executed
 
         const editor = vscode.window.activeTextEditor;
+        if (!editor) {
+            vscode.window.showWarningMessage('You have to active a file first');
+            return;
+        }
         const selection = editor.selection;
 
         const cmd = `git blame -L ${selection.start.line + 1},${selection.end.line + 1} ${editor.document.fileName}`;
