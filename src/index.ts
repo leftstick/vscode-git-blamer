@@ -2,6 +2,7 @@
 // Import the module and reference it with the alias vscode in your code below
 import * as vscode from 'vscode';
 import * as child_process from 'child_process';
+import { parse, pretty } from './parser';
 
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
@@ -24,7 +25,7 @@ export function activate(context: vscode.ExtensionContext) {
         }
         const selection = editor.selection;
 
-        const cmd = `git blame -L ${selection.start.line + 1},${selection.end.line + 1} ${editor.document.fileName}`;
+        const cmd = `git blame -L ${selection.start.line + 1},${selection.end.line + 1} ${editor.document.fileName} --line-porcelain`;
 
         child_process.exec(cmd, {
             cwd: vscode.workspace.rootPath
@@ -34,9 +35,9 @@ export function activate(context: vscode.ExtensionContext) {
             if (error) {
                 return myOutputChannel.append(error.message);
             }
-            myOutputChannel.append(stdout);
+            myOutputChannel.append(pretty(parse(stdout)));
         });
-       
+
     });
 
     context.subscriptions.push(disposable);
