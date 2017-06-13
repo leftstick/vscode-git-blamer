@@ -2,7 +2,7 @@
     "name": "vscode-git-blamer",
     "displayName": "git-blamer",
     "description": "git blame selected source code information in output panel",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "publisher": "howardzuo",
     "engines": {
         "vscode": "^1.11.0"
@@ -34,7 +34,8 @@
         "menus": {
             "editor/context": [{
                 "command": "extension.gitblame",
-                "group": "sourcecontrol"
+                "group": "sourcecontrol",
+                "when": "config.git.enabled && scmProvider == git && gitState == idle"
             }]
         },
         "commands": [{
@@ -50,6 +51,6 @@
     "devDependencies": {
         "typescript": "^2.3.4",
         "vscode": "^1.1.0",
-        "@types/node": "^7.0.23"
+        "@types/node": "^7.0.31"
     }
 }
