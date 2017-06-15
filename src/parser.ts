@@ -1,17 +1,17 @@
-import { Commit } from './model';
+import { Item } from './model';
 import { formatDate } from './utils';
 
-export function parse(str: string): Array<Commit> {
+export function parse(str: string): Array<Item> {
     const lines = str.replace(/\r\n/mg, '\n').split('\n');
 
-    const commits: Array<Commit> = [];
+    const commits: Array<Item> = [];
 
     let commit;
 
     for (let i = 0; i < lines.length - 1; i++) {
         const line = lines[i];
 
-        if (/^[a-z0-9]{15}/.test(line)) {
+        if (/^[a-z0-9]{15,}/.test(line)) {
             commit = {};
             commits.push(commit);
             commit.hash = line.split(' ')[0];
@@ -47,7 +47,7 @@ export function parse(str: string): Array<Commit> {
     return commits;
 }
 
-export function pretty(commits: Array<Commit>): string {
+export function pretty(commits: Array<Item>): string {
     return commits.map(c => {
         return `${c.shortHash} ${c.author} ${formatDate(c.authorTime * 1000)} "${c.commitMessage}" ${c.change}`;
     })

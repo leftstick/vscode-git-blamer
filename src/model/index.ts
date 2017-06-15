@@ -1,6 +1,6 @@
 
 
-export interface Commit {
+export interface Item {
     hash: string;
     shortHash: string;
     author: string;
