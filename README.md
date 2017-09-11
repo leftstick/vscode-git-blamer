@@ -29,7 +29,7 @@ I assume you have [git](https://git-scm.com/) installed.
 
 
 [vs-url]: https://marketplace.visualstudio.com/items?itemName=howardzuo.vscode-git-blamer
-[vs-image]: http://vsmarketplacebadge.apphb.com/version/howardzuo.vscode-git-blamer.svg
-[install-url]: http://vsmarketplacebadge.apphb.com/installs/howardzuo.vscode-git-blamer.svg
-[rate-url]: http://vsmarketplacebadge.apphb.com/rating/howardzuo.vscode-git-blamer.svg
+[vs-image]: https://vsmarketplacebadge.apphb.com/version/howardzuo.vscode-git-blamer.svg
+[install-url]: https://vsmarketplacebadge.apphb.com/installs/howardzuo.vscode-git-blamer.svg
+[rate-url]: https://vsmarketplacebadge.apphb.com/rating/howardzuo.vscode-git-blamer.svg
 [license-url]: https://img.shields.io/github/license/leftstick/vscode-git-blamer.svg

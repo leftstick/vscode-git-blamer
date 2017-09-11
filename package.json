@@ -2,10 +2,10 @@
     "name": "vscode-git-blamer",
     "displayName": "git-blamer",
     "description": "git blame selected source code information in output panel",
-    "version": "1.1.1",
+    "version": "1.1.2",
     "publisher": "howardzuo",
     "engines": {
-        "vscode": "^1.11.0"
+        "vscode": "^1.16.0"
     },
     "scripts": {
         "vscode:prepublish": "tsc -p ./",
@@ -32,25 +32,31 @@
     "main": "./out/src",
     "contributes": {
         "menus": {
-            "editor/context": [{
-                "command": "extension.gitblame",
-                "group": "sourcecontrol",
-                "when": "config.git.enabled && scmProvider == git && gitState == idle"
-            }]
+            "editor/context": [
+                {
+                    "command": "extension.gitblame",
+                    "group": "sourcecontrol",
+                    "when": "config.git.enabled"
+                }
+            ]
         },
-        "commands": [{
-            "command": "extension.gitblame",
-            "title": "Git blame",
-            "key": "ctrl+b"
-        }],
-        "keybindings": [{
-            "command": "extension.gitblame",
-            "key": "alt+b"
-        }]
+        "commands": [
+            {
+                "command": "extension.gitblame",
+                "title": "Git blame",
+                "key": "ctrl+b"
+            }
+        ],
+        "keybindings": [
+            {
+                "command": "extension.gitblame",
+                "key": "alt+b"
+            }
+        ]
     },
     "devDependencies": {
-        "typescript": "^2.3.4",
-        "vscode": "^1.1.0",
-        "@types/node": "^7.0.31"
+        "typescript": "^2.5.2",
+        "vscode": "^1.1.5",
+        "@types/node": "^8.0.28"
     }
 }
